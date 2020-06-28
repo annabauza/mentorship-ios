@@ -60,6 +60,6 @@ struct RelationDetailList: View {
 
 struct RelationDetailList_Previews: PreviewProvider {
     static var previews: some View {
-        RelationDetailList(index: 0, navigationTitle: "", homeViewModel: HomeViewModel())
+        RelationDetailList(index: 0, navigationTitle: "", homeViewModel: HomeViewModel(homeService: HomeApiService()))
     }
 }

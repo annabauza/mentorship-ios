@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct Home: View {
-    @ObservedObject var homeViewModel = HomeViewModel()
+    @ObservedObject var homeViewModel = HomeViewModel(homeService: HomeApiService())
     private var relationsData: UIHelper.HomeScreen.RelationsListData {
         return homeViewModel.relationsListData
     }

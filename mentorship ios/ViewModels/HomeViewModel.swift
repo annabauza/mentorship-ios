@@ -16,9 +16,10 @@ class HomeViewModel: ObservableObject {
     var profileViewModel = ProfileViewModel()
     var isLoading: Bool = false
     private var cancellable: AnyCancellable?
-    
+    var service: HomeServiceProtocol?
+
     // MARK: - Functions
-    init() {
+    init(homeService: HomeServiceProtocol) {
         //get auth token
         guard let token = try? KeychainManager.readKeychain() else {
             return
@@ -29,21 +30,17 @@ class HomeViewModel: ObservableObject {
         isLoading = true
         
         //parallel request for profile and home
-        cancellable = NetworkManager.callAPI(urlString: URLStringConstants.Users.home, token: token)
-            .receive(on: RunLoop.main)
-            .catch { _ in Just(self.homeResponseData) }
-            .combineLatest(
-                NetworkManager.callAPI(urlString: URLStringConstants.Users.profile, token: token)
-                    .receive(on: RunLoop.main)
-                    .catch { _ in Just(self.profileViewModel.getProfile()) }
-            )
-            .sink { home, profile in
+        
+        service = homeService
+        cancellable = self.service?.fetch(token: token, receiveValue: { (p, h) in
+            if let profile = p, let home = h {
                 self.profileViewModel.saveProfile(profile: profile)
                 self.profileData = profile
                 self.updateCount(homeData: home)
                 self.homeResponseData = home
                 self.isLoading = false
-        }
+            }
+        })
     }
     
     func updateCount(homeData: HomeModel.HomeResponseData) {

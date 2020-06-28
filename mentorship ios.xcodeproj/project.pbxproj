@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48D7602924A8FBF1006A4766 /* HomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7602824A8FBF1006A4766 /* HomeApiService.swift */; };
+		48D7602B24A8FC0D006A4766 /* HomeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7602A24A8FC0D006A4766 /* HomeServiceProtocol.swift */; };
 		530F44142482752500B1FD0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F44132482752500B1FD0B /* AppDelegate.swift */; };
 		530F44162482752500B1FD0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F44152482752500B1FD0B /* SceneDelegate.swift */; };
 		530F44192482752500B1FD0B /* mentorship_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 530F44172482752500B1FD0B /* mentorship_ios.xcdatamodeld */; };
@@ -84,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48D7602824A8FBF1006A4766 /* HomeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiService.swift; sourceTree = "<group>"; };
+		48D7602A24A8FC0D006A4766 /* HomeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceProtocol.swift; sourceTree = "<group>"; };
 		530F44102482752500B1FD0B /* mentorship ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mentorship ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		530F44132482752500B1FD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		530F44152482752500B1FD0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +180,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48D7602624A8FBAB006A4766 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				48D7602724A8FBBF006A4766 /* Networking */,
+				48D7602A24A8FC0D006A4766 /* HomeServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		48D7602724A8FBBF006A4766 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				48D7602824A8FBF1006A4766 /* HomeApiService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		530F44072482752500B1FD0B = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +220,7 @@
 		530F44122482752500B1FD0B /* mentorship ios */ = {
 			isa = PBXGroup;
 			children = (
+				48D7602624A8FBAB006A4766 /* Service */,
 				83AA531B249F85E7001D6B0B /* Utilities */,
 				53C0206B249B87ED0000BEB5 /* Protocols */,
 				53729E00248E2C7700E79C24 /* Extensions */,
@@ -589,10 +611,12 @@
 				839761B9249F7E130020535C /* LoginViewModel.swift in Sources */,
 				530F441B2482752500B1FD0B /* ContentView.swift in Sources */,
 				536A4C42248E70880027E44D /* MemberDetail.swift in Sources */,
+				48D7602B24A8FC0D006A4766 /* HomeServiceProtocol.swift in Sources */,
 				535247EC248EED0D0091AD21 /* SendRequest.swift in Sources */,
 				53EB46EA2488CBBF005656B9 /* DesignConstants.swift in Sources */,
 				538E22E9248EBD7900842835 /* MemberDetailCell.swift in Sources */,
 				531C8067248A8F0A00AE81EF /* URLStringConstants.swift in Sources */,
+				48D7602924A8FBF1006A4766 /* HomeApiService.swift in Sources */,
 				531C8070248AA9BE00AE81EF /* Home.swift in Sources */,
 				5386012B2493775800D0E460 /* RelationListCell.swift in Sources */,
 				53EB46EC2488D5AA005656B9 /* ImageNameConstants.swift in Sources */,
