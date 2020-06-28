@@ -12,7 +12,7 @@ class HomeApiService : HomeServiceProtocol {
     var homeResponseData : HomeModel.HomeResponseData?
     var profileViewModel = ProfileViewModel()
     
-    func fetch(token: String, receiveValue: @escaping ((ProfileModel.ProfileData?, HomeModel.HomeResponseData?) -> Void)) -> AnyCancellable {
+    func fetch(token: String, receiveValue: @escaping ((ProfileModel.ProfileData?, HomeModel.HomeResponseData?) -> Void)) -> AnyCancellable? {
         return NetworkManager.callAPI(urlString: URLStringConstants.Users.home, token: token)
                     .receive(on: RunLoop.main)
         .catch { _ in Just(self.homeResponseData) }

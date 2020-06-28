@@ -8,5 +8,5 @@ import Foundation
 import Combine
 
 protocol HomeServiceProtocol {
-    func fetch(token: String, receiveValue: @escaping ((ProfileModel.ProfileData? ,HomeModel.HomeResponseData?) -> Void)) -> AnyCancellable
+    func fetch(token: String, receiveValue: @escaping ((ProfileModel.ProfileData? ,HomeModel.HomeResponseData?) -> Void)) -> AnyCancellable?
 }

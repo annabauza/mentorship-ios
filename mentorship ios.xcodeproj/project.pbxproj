@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		48D7602924A8FBF1006A4766 /* HomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7602824A8FBF1006A4766 /* HomeApiService.swift */; };
 		48D7602B24A8FC0D006A4766 /* HomeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7602A24A8FC0D006A4766 /* HomeServiceProtocol.swift */; };
+		48D7602C24A8FFF1006A4766 /* HomeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7602A24A8FC0D006A4766 /* HomeServiceProtocol.swift */; };
+		48D7602F24A90013006A4766 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7602E24A90013006A4766 /* HomeViewModelTest.swift */; };
+		48D7603024A9006A006A4766 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839761BC249F7FED0020535C /* HomeViewModel.swift */; };
+		48D7603124A90078006A4766 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839761C0249F821A0020535C /* ProfileViewModel.swift */; };
+		48D7603224A90098006A4766 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA66562492D98E007AEB04 /* HomeModel.swift */; };
+		48D7603324A910A2006A4766 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA66582492EA1E007AEB04 /* ProfileModel.swift */; };
+		48D7603424A910AC006A4766 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA531C249F860F001D6B0B /* UIHelper.swift */; };
+		48D7603524A910B5006A4766 /* ImageNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB46EB2488D5AA005656B9 /* ImageNameConstants.swift */; };
+		48D7603624A910C1006A4766 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB46E92488CBBF005656B9 /* DesignConstants.swift */; };
+		48D7603724A91141006A4766 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB664D24A411B900B02208 /* About.swift */; };
+		48D7603824A9114B006A4766 /* LocalizableStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB47002488EBAF005656B9 /* LocalizableStringConstants.swift */; };
+		48D7603924A911BF006A4766 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB664F24A41E1A00B02208 /* WebView.swift */; };
+		48D7603A24A911CB006A4766 /* URLStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531C8066248A8F0A00AE81EF /* URLStringConstants.swift */; };
+		48D7603B24A911D4006A4766 /* ProfileProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C0206C249B88370000BEB5 /* ProfileProperties.swift */; };
+		48D7603C24A911DE006A4766 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5310E51D2492D398001AF464 /* UserDefaultsConstants.swift */; };
+		48D7603D24A911E6006A4766 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538105AD248B2EFB00542E9A /* KeychainManager.swift */; };
+		48D7603E24A911F0006A4766 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531C8068248A918200AE81EF /* NetworkManager.swift */; };
 		530F44142482752500B1FD0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F44132482752500B1FD0B /* AppDelegate.swift */; };
 		530F44162482752500B1FD0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F44152482752500B1FD0B /* SceneDelegate.swift */; };
 		530F44192482752500B1FD0B /* mentorship_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 530F44172482752500B1FD0B /* mentorship_ios.xcdatamodeld */; };
@@ -88,6 +105,7 @@
 /* Begin PBXFileReference section */
 		48D7602824A8FBF1006A4766 /* HomeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiService.swift; sourceTree = "<group>"; };
 		48D7602A24A8FC0D006A4766 /* HomeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceProtocol.swift; sourceTree = "<group>"; };
+		48D7602E24A90013006A4766 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 		530F44102482752500B1FD0B /* mentorship ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mentorship ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		530F44132482752500B1FD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		530F44152482752500B1FD0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +276,7 @@
 			children = (
 				530F442D2482752600B1FD0B /* MentorshipTests.swift */,
 				530F442F2482752600B1FD0B /* Info.plist */,
+				48D7602E24A90013006A4766 /* HomeViewModelTest.swift */,
 			);
 			path = "mentorship iosTests";
 			sourceTree = "<group>";
@@ -660,7 +679,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D7603E24A911F0006A4766 /* NetworkManager.swift in Sources */,
+				48D7602F24A90013006A4766 /* HomeViewModelTest.swift in Sources */,
+				48D7603324A910A2006A4766 /* ProfileModel.swift in Sources */,
+				48D7603B24A911D4006A4766 /* ProfileProperties.swift in Sources */,
+				48D7603924A911BF006A4766 /* WebView.swift in Sources */,
+				48D7603824A9114B006A4766 /* LocalizableStringConstants.swift in Sources */,
+				48D7603724A91141006A4766 /* About.swift in Sources */,
+				48D7603D24A911E6006A4766 /* KeychainManager.swift in Sources */,
+				48D7603524A910B5006A4766 /* ImageNameConstants.swift in Sources */,
+				48D7603A24A911CB006A4766 /* URLStringConstants.swift in Sources */,
+				48D7603624A910C1006A4766 /* DesignConstants.swift in Sources */,
+				48D7602C24A8FFF1006A4766 /* HomeServiceProtocol.swift in Sources */,
+				48D7603C24A911DE006A4766 /* UserDefaultsConstants.swift in Sources */,
+				48D7603224A90098006A4766 /* HomeModel.swift in Sources */,
 				530F442E2482752600B1FD0B /* MentorshipTests.swift in Sources */,
+				48D7603024A9006A006A4766 /* HomeViewModel.swift in Sources */,
+				48D7603124A90078006A4766 /* ProfileViewModel.swift in Sources */,
+				48D7603424A910AC006A4766 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

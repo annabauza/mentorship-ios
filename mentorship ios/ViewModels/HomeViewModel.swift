@@ -32,8 +32,8 @@ class HomeViewModel: ObservableObject {
         //parallel request for profile and home
         
         service = homeService
-        cancellable = self.service?.fetch(token: token, receiveValue: { (p, h) in
-            if let profile = p, let home = h {
+        cancellable = self.service?.fetch(token: token, receiveValue: { (receiveProfile, receiveHome) in
+            if let profile = receiveProfile, let home = receiveHome {
                 self.profileViewModel.saveProfile(profile: profile)
                 self.profileData = profile
                 self.updateCount(homeData: home)
